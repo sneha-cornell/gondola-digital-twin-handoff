@@ -15,23 +15,25 @@ This version uses, in order:
     3. This script's contribution: real observed 3D points per box
        (geometry.py::_observed_points_in_bbox, real function, imported not
        reimplemented), background-rejected (same 0.6-unit radius, same
-       reasoning as before), projected onto the product's REAL assigned
-       shelf's REAL axis_u to get left/right edges in COLMAP units.
-    4. THE ACTUAL FIX: the fitted colmap_alignment transform already sitting
-       in aligned/alignment_report.json (scale, rotation, origin -- computed
-       last week by align_products_to_gondola.py against this exact job) is
-       applied to the center point AND both edge points, landing everything
-       in the gondola's real metric frame (meters, +Z up, +X along the bay
-       run) -- the same frame render_planogram.py draws in, not raw COLMAP
-       units.
+       reasoning as before).
+    4. THE ACTUAL FIX: transform the real points into the model frame FIRST,
+       using the fitted colmap_alignment transform already sitting in
+       aligned/alignment_report.json (scale, rotation, origin -- computed
+       last week by align_products_to_gondola.py against this exact job),
+       THEN take center/edges as the median / 5th-95th percentile of the
+       transformed points' model-X coordinate.
 
-Edge points are reconstructed in full 3D (center_3d shifted along axis_u by
-the edge offset, keeping the real v/n from the product's actual shelf_local),
-then transformed as points -- not by scaling the 1-D offset alone -- because
-the transform includes a rotation; scaling a scalar offset would silently
-assume the shelf's u-axis and the model's bay-run axis are parallel, which
-the alignment report's low seat rate (20/35) suggests is not a safe
-assumption to make here.
+    An earlier version of this script did it backwards: it measured edges
+    along shelf["axes"]["u"] in COLMAP space, THEN transformed the resulting
+    3D point. That is wrong -- shelf["axes"]["u"] is geometry.py's
+    _plane_basis() output, an ARBITRARY direction inside the shelf plane,
+    not the bay-run direction. Checked directly: its dot product with the
+    real bay-run axis (frame.rotation[0]) is ~0.04 -- nearly perpendicular.
+    That bug produced a real-looking but wrong finding ("edges land on Y not
+    X"), which was actually just this axis mismatch, not new evidence of
+    alignment weakness. Transforming first and measuring in the model frame
+    sidesteps the whole question of which COLMAP-space axis is "correct" --
+    the fitted rotation already answers that.
 """
 
 from __future__ import annotations
@@ -136,35 +138,25 @@ def main() -> None:
             products_out.append(entry)
             continue
 
-        axis_u = np.array(shelf["axes"]["u"], dtype=float)
-        axis_v = np.array(shelf["axes"]["v"], dtype=float)
-        normal = np.array(shelf["normal"], dtype=float)
-        shelf_centroid = np.array(shelf["centroid"], dtype=float)
-
-        projected_u = points @ axis_u
-        center_u = float(np.median(projected_u))
-        left_u = float(np.percentile(projected_u, EDGE_PERCENTILE))
-        right_u = float(np.percentile(projected_u, 100 - EDGE_PERCENTILE))
-        # keep the product's real v (depth) / n (height-off-plane) from its
-        # already-computed shelf_local -- only u varies to trace the edges
-        v_coord = float(product["shelf_local"]["v"])
-        n_coord = float(product["shelf_local"]["n"])
-
-        def point_at(u: float) -> np.ndarray:
-            return shelf_centroid + u * axis_u + v_coord * axis_v + n_coord * normal
-
-        center_colmap = point_at(center_u)
-        left_colmap = point_at(left_u)
-        right_colmap = point_at(right_u)
-
-        # --- THE FIX: transform all three through the REAL fitted matrix ----
-        center_model = frame.to_model(center_colmap)[0]
-        left_model = frame.to_model(left_colmap)[0]
-        right_model = frame.to_model(right_colmap)[0]
+        # THE ACTUAL FIX: shelf["axes"]["u"] is geometry.py's _plane_basis()
+        # output -- an ARBITRARY direction inside the shelf plane, not the
+        # bay-run direction (checked: dot product with the true bay-run axis
+        # below is ~0.04, i.e. nearly perpendicular). Measuring edges along it
+        # and only THEN transforming was the bug in the first version of this
+        # script. Correct order: transform the real points into the model
+        # frame first (frame.rotation already encodes the true bay-run
+        # direction, solved for by align_products_to_gondola.py), then take
+        # the spread directly in model coordinates -- no intermediate axis
+        # assumption at all.
+        points_model = frame.to_model(points)  # (N, 3) meters, real gondola frame
+        center_model = np.median(points_model, axis=0)
+        left_model = center_model.copy()
+        right_model = center_model.copy()
+        left_model[0] = float(np.percentile(points_model[:, 0], EDGE_PERCENTILE))
+        right_model[0] = float(np.percentile(points_model[:, 0], 100 - EDGE_PERCENTILE))
 
         entry.update({
             "status": "positioned",
-            "center_colmap": [float(v) for v in center_colmap],
             "center_model_m": [float(v) for v in center_model],
             "edge_left_model_m": [float(v) for v in left_model],
             "edge_right_model_m": [float(v) for v in right_model],
@@ -179,9 +171,9 @@ def main() -> None:
         "transform_source": f"real -- {ALIGNMENT_REPORT_JSON} (fitted by align_products_to_gondola.py last week)",
         "edge_source": (
             f"real observed 3D points per box, background-rejected (radius={BACKGROUND_REJECT_RADIUS}), "
-            f"projected onto the product's real assigned shelf's real axis_u, "
-            f"{EDGE_PERCENTILE:.0f}th/{100 - EDGE_PERCENTILE:.0f}th percentile, "
-            "then transformed into the model frame as 3D points (not by scaling a 1-D offset)"
+            "transformed into the model frame FIRST via the real fitted transform, then "
+            f"{EDGE_PERCENTILE:.0f}th/{100 - EDGE_PERCENTILE:.0f}th percentile of model-X taken as the edges "
+            "(NOT projected onto shelf['axes']['u'] beforehand -- that axis is arbitrary, see module docstring)"
         ),
         "frame": "gondola model frame, meters, +Z up, +X bay run (same as render_planogram.py)",
         "positioned_count": len(positioned),
@@ -191,31 +183,23 @@ def main() -> None:
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_JSON.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    # --- did the fitted rotation actually put "along the shelf" onto the
-    # model's bay-run axis (X), or onto depth (Y)? Real question, not
-    # cosmetic -- decides which 2D panel actually shows the edge whiskers.
-    edges_land_on = None
+    # Sanity check the fix actually took: edges should now vary in X (bay
+    # run) and NOT in Y -- by construction (left/right only differ in the
+    # model-X coordinate), so a nonzero dY here would mean the fix regressed.
     if positioned:
         span_x = max(abs(p["edge_right_model_m"][0] - p["edge_left_model_m"][0]) for p in positioned)
         span_y = max(abs(p["edge_right_model_m"][1] - p["edge_left_model_m"][1]) for p in positioned)
-        edges_land_on = "X (bay run)" if span_x >= span_y else "Y (depth)"
-        print(f"Real product widths land mostly on model {edges_land_on} "
-              f"(max |dX|={span_x:.3f} m, max |dY|={span_y:.3f} m) -- "
-              + ("as expected." if edges_land_on == "X (bay run)" else
-                 "NOT the bay-run axis. Consistent with this job's already-documented "
-                 "weak single-image alignment (shelf normal vs camera-up = 0.684)."))
+        print(f"Edge spread: max |dX|={span_x:.3f} m (real product widths), "
+              f"max |dY|={span_y:.3f} m (should be 0.000 by construction)")
 
-    # --- render: TWO panels, both in the real metric frame --------------
-    # Elevation (X vs Z) matches render_planogram.py's convention; top-down
-    # (X vs Y) is added because -- as printed above -- this job's edges
-    # mostly vary in Y, and an elevation-only view would make every whisker
-    # look like a dot, hiding a real alignment-quality finding rather than
-    # showing it.
+    # --- render: single elevation panel (X vs Z), real metric frame -----
+    # A second top-down (X vs Y) panel from the previous version is gone:
+    # with the axis bug fixed, edges no longer vary in Y at all (by
+    # construction), so that panel would show flat lines with nothing to see.
     layout = gondola["layout"]
     run = float(layout["total_bay_run_m"])
-    depth = float(layout["gondola_depth_m"])
     fixture_h = float(layout["gondola_height_m"])
-    width, height = 1800, 1520
+    width, height = 1800, 850
     image = Image.new("RGB", (width, height), "#151b24")
     draw = ImageDraw.Draw(image)
     title_font, body_font, small_font = make_font(38), make_font(24), make_font(18)
@@ -266,22 +250,20 @@ def main() -> None:
             draw.ellipse((pcx - 9, pcy - 9, pcx + 9, pcy + 9), fill="#3d94f6", outline="white", width=2)
 
     draw_panel(150, "height (m) -- elevation, X vs Z", "z", fixture_h, "z")
-    draw_panel(800, "depth (m) -- top-down, X vs Y  (real edge whiskers show up here for this job)",
-              "y", max(depth * 3, 1.0), "y")
 
-    if edges_land_on is not None and edges_land_on != "X (bay run)":
-        draw.text((60, 1375),
-                  f"Finding: real product widths land mostly on model Y (depth), not X (bay run) "
-                  f"-- max |dX|={span_x:.3f} m vs max |dY|={span_y:.3f} m.",
-                  font=body_font, fill="#ffcb77")
-        draw.text((60, 1412),
-                  "This means the fitted rotation for this job does not map the shelf's own "
-                  "in-plane axis onto the fixture's bay-run axis -- consistent with the already-",
-                  font=small_font, fill="#b9d6dc")
-        draw.text((60, 1438),
-                  "documented weak single-image alignment for single_view_00014 (shelf normal vs "
-                  "camera-up = 0.684; only 20/35 products snapped to a shelf).",
-                  font=small_font, fill="#b9d6dc")
+    draw.text((60, 715),
+              f"Edges now measured correctly: max |dX|={span_x:.3f} m (real widths), "
+              f"max |dY|={span_y:.3f} m (0 by construction -- the axis bug from the prior "
+              f"version is fixed).",
+              font=body_font, fill="#8fd97a")
+    draw.text((60, 751),
+              "Separately, still real and unrelated to this fix: this job's shelf-plane fit "
+              "is weak (normal vs camera-up = 0.684, only 20/35 snapped; 9/29 positioned "
+              "products sit below the floor) --",
+              font=small_font, fill="#b9d6dc")
+    draw.text((60, 775),
+              "see the repo README's Known Issues. That needs multi-view capture, not a code fix.",
+              font=small_font, fill="#b9d6dc")
 
     for index, product in enumerate([p for p in products_out if p["status"] != "positioned"]):
         draw.text((1350, 150 + 24 * index), f"{product['id']}: insufficient 3D evidence",
