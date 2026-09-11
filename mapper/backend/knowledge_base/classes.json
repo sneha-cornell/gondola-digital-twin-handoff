@@ -1,0 +1,132 @@
+{
+  "classes": [
+    {
+      "class_id": 0,
+      "class_name": "Crunchmaster Multi-Seed"
+    },
+    {
+      "class_id": 1,
+      "class_name": "Dot's Homestyle Pretzels"
+    },
+    {
+      "class_id": 2,
+      "class_name": "Dot's Homestyle Pretzels BBQ"
+    },
+    {
+      "class_id": 3,
+      "class_name": "Dot's Homestyle Pretzels Honey Mustard"
+    },
+    {
+      "class_id": 4,
+      "class_name": "Fruit Bliss Organic Turkish Apricots"
+    },
+    {
+      "class_id": 5,
+      "class_name": "Hippeas Barbeque"
+    },
+    {
+      "class_id": 6,
+      "class_name": "Hippeas Bohemian Barbeque"
+    },
+    {
+      "class_id": 7,
+      "class_name": "Kettle Brand Backyard Barbeque"
+    },
+    {
+      "class_id": 8,
+      "class_name": "Kettle Brand Dill Pickle"
+    },
+    {
+      "class_id": 9,
+      "class_name": "Kettle Brand Krinkle Cut Dill Pickle"
+    },
+    {
+      "class_id": 10,
+      "class_name": "Kettle Brand Pepperoncini"
+    },
+    {
+      "class_id": 11,
+      "class_name": "Kettle Brand Riffles"
+    },
+    {
+      "class_id": 12,
+      "class_name": "Kettle Brand Sea Salt"
+    },
+    {
+      "class_id": 13,
+      "class_name": "Mavuno Harvest Organic Coconut"
+    },
+    {
+      "class_id": 14,
+      "class_name": "Mavuno Harvest Organic Jackfruit"
+    },
+    {
+      "class_id": 15,
+      "class_name": "Mavuno Harvest Organic Papaya"
+    },
+    {
+      "class_id": 16,
+      "class_name": "Natierra Organic Strawberries"
+    },
+    {
+      "class_id": 17,
+      "class_name": "New York Style Panetini"
+    },
+    {
+      "class_id": 18,
+      "class_name": "PopCorners"
+    },
+    {
+      "class_id": 19,
+      "class_name": "PopCorners Sea Salt"
+    },
+    {
+      "class_id": 20,
+      "class_name": "Popchips"
+    },
+    {
+      "class_id": 21,
+      "class_name": "Popchips BBQ"
+    },
+    {
+      "class_id": 22,
+      "class_name": "Popchips Sea Salt & Vinegar"
+    },
+    {
+      "class_id": 23,
+      "class_name": "Popchips Sweet Heat"
+    },
+    {
+      "class_id": 24,
+      "class_name": "Popcorn for the People Sweet & Salty Kettle"
+    },
+    {
+      "class_id": 25,
+      "class_name": "Reese's Popcorn"
+    },
+    {
+      "class_id": 26,
+      "class_name": "Snyder's Pretzel Sticks"
+    },
+    {
+      "class_id": 27,
+      "class_name": "That's it Organic Dark Chocolate Coconut Date Truffles"
+    },
+    {
+      "class_id": 28,
+      "class_name": "Wilde Protein Chips"
+    },
+    {
+      "class_id": 29,
+      "class_name": "Wilde Protein Chips Nashville Hot"
+    },
+    {
+      "class_id": 30,
+      "class_name": "Wilde Protein Chips Sea Salt & Vinegar"
+    },
+    {
+      "class_id": 31,
+      "class_name": "open_world_cache"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="626" viewBox="0 0 940 626" role="img" aria-label="Aligned planogram elevation">
+  <style>
+    svg {
+      color-scheme: light;
+      --surface: #fcfcfb;
+      --ink: #0b0b0b;
+      --secondary: #52514e;
+      --muted: #898781;
+      --grid: #e1e0d9;
+      --baseline: #c3c2b7;
+      --board: #898781;
+      --seated: #2a78d6;
+      --unseated: #d03b3b;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      svg:where(:not([data-theme="light"])) {
+        color-scheme: dark;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --secondary: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --baseline: #383835;
+      --board: #898781;
+      --seated: #3987e5;
+      --unseated: #d03b3b;
+      }
+    }
+    svg[data-theme="dark"] {
+      color-scheme: dark;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --secondary: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --baseline: #383835;
+      --board: #898781;
+      --seated: #3987e5;
+      --unseated: #d03b3b;
+    }
+    .surface { fill: var(--surface); }
+    .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+    .caption { fill: var(--secondary); font-size: 11.5px; }
+    .axis { fill: var(--muted); font-size: 10.5px; font-variant-numeric: tabular-nums; }
+    .panel-label { fill: var(--ink); font-size: 12.5px; font-weight: 600; }
+    .legend { fill: var(--secondary); font-size: 11.5px; }
+    .grid { stroke: var(--grid); stroke-width: 1; }
+    .outline { stroke: var(--baseline); stroke-width: 2; fill: none; }
+    /* fill:none matters -- an SVG rect with no fill declared paints solid black. */
+    .envelope { stroke: var(--board); stroke-width: 2; stroke-dasharray: 5 4; fill: none; }
+    .board { stroke: var(--board); stroke-width: 2; stroke-linecap: round; }
+    /* 2px surface ring: facings overlap along a shelf, and without it a dense
+       row reads as one blob instead of countable products. */
+    .mark { stroke: var(--surface); stroke-width: 2; }
+    .seated { fill: var(--seated); }
+    .unseated { fill: var(--unseated); }
+    .mark:hover { stroke: var(--ink); }
+  </style>
+  <rect class="surface" x="0" y="0" width="940" height="626"/>
+  <text class="title" x="78" y="30">Products aligned onto the fitted gondola</text>
+  <text class="caption" x="78" y="48">7.26 m run · 1.70 m deep · 1.80 m high · shelf heights measured · 1.7868 m per COLMAP unit (shelf-match RMS 0.1 cm)</text>
+  <circle class="mark seated" cx="84" cy="62" r="4.5"/>
+  <text class="legend" x="96" y="66">seated on a board (221)</text>
+  <path class="mark unseated" d="M 268 56.5 L 273.5 62 L 268 67.5 L 262.5 62 Z"/>
+  <text class="legend" x="280" y="66">not on any board (0)</text>
+  <g class="panel">
+    <text class="panel-label" x="78" y="116">Side A</text>
+    <text class="caption" x="210" y="116">114 facings on 8 shelves · median clearance 7.2 cm</text>
+    <rect class="outline" x="78.0" y="130.0" width="836.0" height="176.0" rx="2"/>
+    <line class="grid" x1="150.4" y1="306.0" x2="150.4" y2="130.0"/>
+    <text class="axis" x="150.4" y="321.0" text-anchor="middle">-3.00</text>
+    <line class="grid" x1="265.6" y1="306.0" x2="265.6" y2="130.0"/>
+    <text class="axis" x="265.6" y="321.0" text-anchor="middle">-2.00</text>
+    <line class="grid" x1="380.8" y1="306.0" x2="380.8" y2="130.0"/>
+    <text class="axis" x="380.8" y="321.0" text-anchor="middle">-1.00</text>
+    <line class="grid" x1="496.0" y1="306.0" x2="496.0" y2="130.0"/>
+    <text class="axis" x="496.0" y="321.0" text-anchor="middle">+0.00</text>
+    <line class="grid" x1="611.2" y1="306.0" x2="611.2" y2="130.0"/>
+    <text class="axis" x="611.2" y="321.0" text-anchor="middle">+1.00</text>
+    <line class="grid" x1="726.4" y1="306.0" x2="726.4" y2="130.0"/>
+    <text class="axis" x="726.4" y="321.0" text-anchor="middle">+2.00</text>
+    <line class="grid" x1="841.6" y1="306.0" x2="841.6" y2="130.0"/>
+    <text class="axis" x="841.6" y="321.0" text-anchor="middle">+3.00</text>
+    <text class="axis" x="496" y="336.0" text-anchor="middle">along the bay run (m)</text>
+    <line class="board" x1="78.0" y1="280.3" x2="914.0" y2="280.3"><title>Unit1_Shelf_01 — z 0.262 m, 16 facings</title></line>
+    <text class="axis" x="68" y="283.8" text-anchor="end">0.262</text>
+    <line class="board" x1="78.0" y1="261.3" x2="914.0" y2="261.3"><title>Unit1_Shelf_02 — z 0.457 m, 8 facings</title></line>
+    <text class="axis" x="68" y="264.8" text-anchor="end">0.457</text>
+    <line class="board" x1="78.0" y1="250.6" x2="914.0" y2="250.6"><title>Unit1_Shelf_03 — z 0.566 m, 20 facings</title></line>
+    <line class="board" x1="78.0" y1="235.2" x2="914.0" y2="235.2"><title>Unit1_Shelf_04 — z 0.724 m, 14 facings</title></line>
+    <text class="axis" x="68" y="238.7" text-anchor="end">0.724</text>
+    <line class="board" x1="78.0" y1="224.5" x2="914.0" y2="224.5"><title>Unit1_Shelf_05 — z 0.834 m, 22 facings</title></line>
+    <line class="board" x1="78.0" y1="207.9" x2="914.0" y2="207.9"><title>Unit1_Shelf_06 — z 1.004 m, 13 facings</title></line>
+    <text class="axis" x="68" y="211.4" text-anchor="end">1.004</text>
+    <line class="board" x1="78.0" y1="167.5" x2="914.0" y2="167.5"><title>Unit1_Shelf_07 — z 1.417 m, 9 facings</title></line>
+    <text class="axis" x="68" y="171.0" text-anchor="end">1.417</text>
+    <line class="board" x1="78.0" y1="141.3" x2="914.0" y2="141.3"><title>Unit1_Shelf_08 — z 1.684 m, 12 facings</title></line>
+    <text class="axis" x="68" y="144.8" text-anchor="end">1.684</text>
+    <text class="axis" x="68" y="309.5" text-anchor="end">0.000</text>
+    <text class="axis" x="68" y="124.0" text-anchor="end">height (m)</text>
+    <circle class="mark seated" cx="162.9" cy="272.0" r="4.5"><title>Oreo Original — Unit1_Shelf_01 — z 0.348 m, clearance 6.5 cm</title></circle>
+    <circle class="mark seated" cx="255.4" cy="267.5" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_01 — z 0.393 m, clearance 11.1 cm</title></circle>
+    <circle class="mark seated" cx="283.7" cy="269.0" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_01 — z 0.378 m, clearance 9.6 cm</title></circle>
+    <circle class="mark seated" cx="310.3" cy="269.2" r="4.5"><title>Takis Fuego — Unit1_Shelf_01 — z 0.377 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="424.6" cy="267.9" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_01 — z 0.390 m, clearance 10.7 cm</title></circle>
+    <circle class="mark seated" cx="434.2" cy="270.9" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_01 — z 0.359 m, clearance 7.7 cm</title></circle>
+    <circle class="mark seated" cx="458.7" cy="272.7" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_01 — z 0.340 m, clearance 5.8 cm</title></circle>
+    <circle class="mark seated" cx="470.5" cy="269.8" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_01 — z 0.370 m, clearance 8.8 cm</title></circle>
+    <circle class="mark seated" cx="609.6" cy="265.7" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_01 — z 0.412 m, clearance 12.9 cm</title></circle>
+    <circle class="mark seated" cx="625.1" cy="269.8" r="4.5"><title>Cheez-It Original — Unit1_Shelf_01 — z 0.370 m, clearance 8.7 cm</title></circle>
+    <circle class="mark seated" cx="781.1" cy="267.2" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_01 — z 0.397 m, clearance 11.5 cm</title></circle>
+    <circle class="mark seated" cx="786.5" cy="267.2" r="4.5"><title>Ritz Crackers — Unit1_Shelf_01 — z 0.396 m, clearance 11.4 cm</title></circle>
+    <circle class="mark seated" cx="821.5" cy="268.7" r="4.5"><title>Oreo Original — Unit1_Shelf_01 — z 0.382 m, clearance 9.9 cm</title></circle>
+    <circle class="mark seated" cx="824.6" cy="274.0" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_01 — z 0.327 m, clearance 4.5 cm</title></circle>
+    <circle class="mark seated" cx="832.2" cy="267.1" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_01 — z 0.398 m, clearance 11.6 cm</title></circle>
+    <circle class="mark seated" cx="839.6" cy="271.8" r="4.5"><title>Takis Fuego — Unit1_Shelf_01 — z 0.350 m, clearance 6.7 cm</title></circle>
+    <circle class="mark seated" cx="152.7" cy="245.8" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_03 — z 0.616 m, clearance 3.0 cm</title></circle>
+    <circle class="mark seated" cx="418.8" cy="245.3" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_03 — z 0.620 m, clearance 3.4 cm</title></circle>
+    <circle class="mark seated" cx="468.3" cy="252.1" r="4.5"><title>Cheez-It Original — Unit1_Shelf_02 — z 0.551 m, clearance 7.4 cm</title></circle>
+    <circle class="mark seated" cx="520.6" cy="249.2" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_02 — z 0.581 m, clearance 10.4 cm</title></circle>
+    <circle class="mark seated" cx="536.0" cy="249.3" r="4.5"><title>Ritz Crackers — Unit1_Shelf_02 — z 0.580 m, clearance 10.3 cm</title></circle>
+    <circle class="mark seated" cx="536.9" cy="252.2" r="4.5"><title>Oreo Original — Unit1_Shelf_02 — z 0.551 m, clearance 7.4 cm</title></circle>
+    <circle class="mark seated" cx="629.6" cy="253.4" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_02 — z 0.537 m, clearance 6.1 cm</title></circle>
+    <circle class="mark seated" cx="686.3" cy="253.7" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_02 — z 0.534 m, clearance 5.8 cm</title></circle>
+    <circle class="mark seated" cx="750.0" cy="254.6" r="4.5"><title>Takis Fuego — Unit1_Shelf_02 — z 0.526 m, clearance 4.9 cm</title></circle>
+    <circle class="mark seated" cx="841.5" cy="254.5" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_02 — z 0.527 m, clearance 5.0 cm</title></circle>
+    <circle class="mark seated" cx="157.7" cy="242.9" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_03 — z 0.646 m, clearance 5.9 cm</title></circle>
+    <circle class="mark seated" cx="225.0" cy="235.3" r="4.5"><title>Takis Fuego — Unit1_Shelf_03 — z 0.723 m, clearance 13.7 cm</title></circle>
+    <circle class="mark seated" cx="282.4" cy="242.8" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_03 — z 0.646 m, clearance 6.0 cm</title></circle>
+    <circle class="mark seated" cx="326.0" cy="240.7" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_03 — z 0.667 m, clearance 8.1 cm</title></circle>
+    <circle class="mark seated" cx="354.7" cy="236.7" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_03 — z 0.709 m, clearance 12.3 cm</title></circle>
+    <circle class="mark seated" cx="375.5" cy="241.8" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_03 — z 0.657 m, clearance 7.1 cm</title></circle>
+    <circle class="mark seated" cx="381.8" cy="243.7" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_03 — z 0.637 m, clearance 5.1 cm</title></circle>
+    <circle class="mark seated" cx="432.3" cy="241.5" r="4.5"><title>Cheez-It Original — Unit1_Shelf_03 — z 0.660 m, clearance 7.4 cm</title></circle>
+    <circle class="mark seated" cx="472.5" cy="241.8" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_03 — z 0.656 m, clearance 7.0 cm</title></circle>
+    <circle class="mark seated" cx="475.1" cy="241.3" r="4.5"><title>Ritz Crackers — Unit1_Shelf_03 — z 0.661 m, clearance 7.5 cm</title></circle>
+    <circle class="mark seated" cx="492.2" cy="240.9" r="4.5"><title>Oreo Original — Unit1_Shelf_03 — z 0.666 m, clearance 8.0 cm</title></circle>
+    <circle class="mark seated" cx="498.2" cy="240.2" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_03 — z 0.672 m, clearance 8.6 cm</title></circle>
+    <circle class="mark seated" cx="547.0" cy="240.0" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_03 — z 0.675 m, clearance 8.9 cm</title></circle>
+    <circle class="mark seated" cx="660.0" cy="243.1" r="4.5"><title>Takis Fuego — Unit1_Shelf_03 — z 0.643 m, clearance 5.7 cm</title></circle>
+    <circle class="mark seated" cx="719.5" cy="243.0" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_03 — z 0.645 m, clearance 5.9 cm</title></circle>
+    <circle class="mark seated" cx="809.4" cy="244.8" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_03 — z 0.626 m, clearance 4.0 cm</title></circle>
+    <circle class="mark seated" cx="824.4" cy="244.9" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_03 — z 0.625 m, clearance 3.8 cm</title></circle>
+    <circle class="mark seated" cx="857.5" cy="243.9" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_03 — z 0.635 m, clearance 4.8 cm</title></circle>
+    <circle class="mark seated" cx="135.8" cy="222.2" r="4.5"><title>Cheez-It Original — Unit1_Shelf_05 — z 0.857 m, clearance 0.4 cm</title></circle>
+    <circle class="mark seated" cx="178.3" cy="224.6" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_04 — z 0.833 m, clearance 8.8 cm</title></circle>
+    <circle class="mark seated" cx="195.0" cy="223.4" r="4.5"><title>Ritz Crackers — Unit1_Shelf_04 — z 0.845 m, clearance 10.1 cm</title></circle>
+    <circle class="mark seated" cx="214.6" cy="226.4" r="4.5"><title>Oreo Original — Unit1_Shelf_04 — z 0.815 m, clearance 7.0 cm</title></circle>
+    <circle class="mark seated" cx="214.1" cy="227.6" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_04 — z 0.802 m, clearance 5.7 cm</title></circle>
+    <circle class="mark seated" cx="232.5" cy="225.4" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_04 — z 0.824 m, clearance 8.0 cm</title></circle>
+    <circle class="mark seated" cx="254.6" cy="229.5" r="4.5"><title>Takis Fuego — Unit1_Shelf_04 — z 0.782 m, clearance 3.8 cm</title></circle>
+    <circle class="mark seated" cx="312.1" cy="227.1" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_04 — z 0.807 m, clearance 6.2 cm</title></circle>
+    <circle class="mark seated" cx="366.7" cy="223.5" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_04 — z 0.844 m, clearance 10.0 cm</title></circle>
+    <circle class="mark seated" cx="474.7" cy="226.8" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_04 — z 0.810 m, clearance 6.6 cm</title></circle>
+    <circle class="mark seated" cx="486.2" cy="222.7" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_04 — z 0.852 m, clearance 10.8 cm</title></circle>
+    <circle class="mark seated" cx="623.9" cy="226.2" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_04 — z 0.817 m, clearance 7.2 cm</title></circle>
+    <circle class="mark seated" cx="622.2" cy="221.5" r="4.5"><title>Cheez-It Original — Unit1_Shelf_05 — z 0.864 m, clearance 1.1 cm</title></circle>
+    <circle class="mark seated" cx="691.8" cy="222.2" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_05 — z 0.857 m, clearance 0.4 cm</title></circle>
+    <circle class="mark seated" cx="706.3" cy="222.1" r="4.5"><title>Ritz Crackers — Unit1_Shelf_05 — z 0.858 m, clearance 0.5 cm</title></circle>
+    <circle class="mark seated" cx="776.6" cy="224.0" r="4.5"><title>Oreo Original — Unit1_Shelf_04 — z 0.839 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="788.2" cy="229.2" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_04 — z 0.786 m, clearance 4.2 cm</title></circle>
+    <circle class="mark seated" cx="834.2" cy="230.8" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_04 — z 0.769 m, clearance 2.5 cm</title></circle>
+    <circle class="mark seated" cx="127.4" cy="218.1" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_05 — z 0.899 m, clearance 4.5 cm</title></circle>
+    <circle class="mark seated" cx="132.7" cy="220.8" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_05 — z 0.871 m, clearance 1.8 cm</title></circle>
+    <circle class="mark seated" cx="312.4" cy="215.3" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_05 — z 0.928 m, clearance 7.4 cm</title></circle>
+    <circle class="mark seated" cx="343.8" cy="217.2" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_05 — z 0.908 m, clearance 5.4 cm</title></circle>
+    <circle class="mark seated" cx="428.3" cy="217.6" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_05 — z 0.905 m, clearance 5.1 cm</title></circle>
+    <circle class="mark seated" cx="431.7" cy="219.8" r="4.5"><title>Cheez-It Original — Unit1_Shelf_05 — z 0.881 m, clearance 2.8 cm</title></circle>
+    <circle class="mark seated" cx="452.8" cy="219.0" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_05 — z 0.890 m, clearance 3.6 cm</title></circle>
+    <circle class="mark seated" cx="456.8" cy="213.9" r="4.5"><title>Ritz Crackers — Unit1_Shelf_05 — z 0.942 m, clearance 8.8 cm</title></circle>
+    <circle class="mark seated" cx="463.3" cy="216.7" r="4.5"><title>Oreo Original — Unit1_Shelf_05 — z 0.913 m, clearance 5.9 cm</title></circle>
+    <circle class="mark seated" cx="492.4" cy="213.1" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_05 — z 0.950 m, clearance 9.7 cm</title></circle>
+    <circle class="mark seated" cx="543.8" cy="214.8" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_05 — z 0.933 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="565.7" cy="213.5" r="4.5"><title>Takis Fuego — Unit1_Shelf_05 — z 0.946 m, clearance 9.2 cm</title></circle>
+    <circle class="mark seated" cx="581.2" cy="217.0" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_05 — z 0.911 m, clearance 5.7 cm</title></circle>
+    <circle class="mark seated" cx="595.5" cy="220.0" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_05 — z 0.879 m, clearance 2.6 cm</title></circle>
+    <circle class="mark seated" cx="713.4" cy="211.0" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_05 — z 0.972 m, clearance 11.8 cm</title></circle>
+    <circle class="mark seated" cx="754.8" cy="219.4" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_05 — z 0.885 m, clearance 3.2 cm</title></circle>
+    <circle class="mark seated" cx="786.9" cy="215.7" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_05 — z 0.924 m, clearance 7.0 cm</title></circle>
+    <circle class="mark seated" cx="835.2" cy="212.1" r="4.5"><title>Cheez-It Original — Unit1_Shelf_05 — z 0.960 m, clearance 10.7 cm</title></circle>
+    <circle class="mark seated" cx="125.7" cy="201.4" r="4.5"><title>Ritz Crackers — Unit1_Shelf_06 — z 1.070 m, clearance 4.6 cm</title></circle>
+    <circle class="mark seated" cx="147.0" cy="195.6" r="4.5"><title>Oreo Original — Unit1_Shelf_06 — z 1.130 m, clearance 10.6 cm</title></circle>
+    <circle class="mark seated" cx="255.5" cy="195.7" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_06 — z 1.128 m, clearance 10.5 cm</title></circle>
+    <circle class="mark seated" cx="301.5" cy="202.6" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_06 — z 1.058 m, clearance 3.4 cm</title></circle>
+    <circle class="mark seated" cx="320.9" cy="202.0" r="4.5"><title>Takis Fuego — Unit1_Shelf_06 — z 1.063 m, clearance 4.0 cm</title></circle>
+    <circle class="mark seated" cx="379.6" cy="201.2" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_06 — z 1.072 m, clearance 4.8 cm</title></circle>
+    <circle class="mark seated" cx="484.8" cy="200.6" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_06 — z 1.078 m, clearance 5.4 cm</title></circle>
+    <circle class="mark seated" cx="490.6" cy="193.4" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_06 — z 1.152 m, clearance 12.8 cm</title></circle>
+    <circle class="mark seated" cx="546.1" cy="201.7" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_06 — z 1.067 m, clearance 4.3 cm</title></circle>
+    <circle class="mark seated" cx="662.6" cy="198.3" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_06 — z 1.101 m, clearance 7.7 cm</title></circle>
+    <circle class="mark seated" cx="678.4" cy="197.0" r="4.5"><title>Cheez-It Original — Unit1_Shelf_06 — z 1.114 m, clearance 9.1 cm</title></circle>
+    <circle class="mark seated" cx="691.9" cy="192.5" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_06 — z 1.160 m, clearance 13.7 cm</title></circle>
+    <circle class="mark seated" cx="804.9" cy="202.2" r="4.5"><title>Ritz Crackers — Unit1_Shelf_06 — z 1.062 m, clearance 3.8 cm</title></circle>
+    <circle class="mark seated" cx="120.6" cy="158.0" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_07 — z 1.514 m, clearance 7.7 cm</title></circle>
+    <circle class="mark seated" cx="254.9" cy="156.6" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_07 — z 1.528 m, clearance 9.1 cm</title></circle>
+    <circle class="mark seated" cx="360.0" cy="159.2" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_07 — z 1.502 m, clearance 6.5 cm</title></circle>
+    <circle class="mark seated" cx="382.0" cy="157.7" r="4.5"><title>Cheez-It Original — Unit1_Shelf_07 — z 1.516 m, clearance 8.0 cm</title></circle>
+    <circle class="mark seated" cx="510.6" cy="153.3" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_07 — z 1.561 m, clearance 12.5 cm</title></circle>
+    <circle class="mark seated" cx="570.0" cy="155.7" r="4.5"><title>Ritz Crackers — Unit1_Shelf_07 — z 1.537 m, clearance 10.0 cm</title></circle>
+    <circle class="mark seated" cx="604.7" cy="161.6" r="4.5"><title>Oreo Original — Unit1_Shelf_07 — z 1.477 m, clearance 4.0 cm</title></circle>
+    <circle class="mark seated" cx="634.6" cy="158.5" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_07 — z 1.508 m, clearance 7.2 cm</title></circle>
+    <circle class="mark seated" cx="710.5" cy="155.3" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_07 — z 1.541 m, clearance 10.4 cm</title></circle>
+    <circle class="mark seated" cx="153.8" cy="128.6" r="4.5"><title>Goldfish Cheddar — Unit1_Shelf_08 — z 1.814 m, clearance 11.0 cm</title></circle>
+    <circle class="mark seated" cx="269.0" cy="131.7" r="4.5"><title>Chex Mix Traditional — Unit1_Shelf_08 — z 1.783 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="375.4" cy="132.9" r="4.5"><title>Takis Fuego — Unit1_Shelf_08 — z 1.770 m, clearance 6.6 cm</title></circle>
+    <circle class="mark seated" cx="384.3" cy="136.3" r="4.5"><title>Sun Chips Harvest Cheddar — Unit1_Shelf_08 — z 1.736 m, clearance 3.2 cm</title></circle>
+    <circle class="mark seated" cx="436.9" cy="131.6" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit1_Shelf_08 — z 1.784 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="441.6" cy="131.7" r="4.5"><title>Kettle Brand Pepperoncini — Unit1_Shelf_08 — z 1.783 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="690.4" cy="128.7" r="4.5"><title>Lay&#x27;s Classic — Unit1_Shelf_08 — z 1.813 m, clearance 10.9 cm</title></circle>
+    <circle class="mark seated" cx="704.4" cy="132.8" r="4.5"><title>Doritos Nacho Cheese — Unit1_Shelf_08 — z 1.771 m, clearance 6.7 cm</title></circle>
+    <circle class="mark seated" cx="703.2" cy="126.6" r="4.5"><title>Cheez-It Original — Unit1_Shelf_08 — z 1.835 m, clearance 13.1 cm</title></circle>
+    <circle class="mark seated" cx="725.1" cy="134.4" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit1_Shelf_08 — z 1.755 m, clearance 5.1 cm</title></circle>
+    <circle class="mark seated" cx="806.3" cy="132.8" r="4.5"><title>Ritz Crackers — Unit1_Shelf_08 — z 1.772 m, clearance 6.8 cm</title></circle>
+    <circle class="mark seated" cx="871.0" cy="132.8" r="4.5"><title>Oreo Original — Unit1_Shelf_08 — z 1.772 m, clearance 6.8 cm</title></circle>
+  </g>
+  <g class="panel">
+    <text class="panel-label" x="78" y="366">Side C</text>
+    <text class="caption" x="210" y="366">107 facings on 8 shelves · median clearance 7.7 cm</text>
+    <rect class="outline" x="78.0" y="380.0" width="836.0" height="176.0" rx="2"/>
+    <line class="grid" x1="150.4" y1="556.0" x2="150.4" y2="380.0"/>
+    <text class="axis" x="150.4" y="571.0" text-anchor="middle">-3.00</text>
+    <line class="grid" x1="265.6" y1="556.0" x2="265.6" y2="380.0"/>
+    <text class="axis" x="265.6" y="571.0" text-anchor="middle">-2.00</text>
+    <line class="grid" x1="380.8" y1="556.0" x2="380.8" y2="380.0"/>
+    <text class="axis" x="380.8" y="571.0" text-anchor="middle">-1.00</text>
+    <line class="grid" x1="496.0" y1="556.0" x2="496.0" y2="380.0"/>
+    <text class="axis" x="496.0" y="571.0" text-anchor="middle">+0.00</text>
+    <line class="grid" x1="611.2" y1="556.0" x2="611.2" y2="380.0"/>
+    <text class="axis" x="611.2" y="571.0" text-anchor="middle">+1.00</text>
+    <line class="grid" x1="726.4" y1="556.0" x2="726.4" y2="380.0"/>
+    <text class="axis" x="726.4" y="571.0" text-anchor="middle">+2.00</text>
+    <line class="grid" x1="841.6" y1="556.0" x2="841.6" y2="380.0"/>
+    <text class="axis" x="841.6" y="571.0" text-anchor="middle">+3.00</text>
+    <text class="axis" x="496" y="586.0" text-anchor="middle">along the bay run (m)</text>
+    <line class="board" x1="78.0" y1="530.3" x2="914.0" y2="530.3"><title>Unit3_Shelf_01 — z 0.262 m, 9 facings</title></line>
+    <text class="axis" x="68" y="533.8" text-anchor="end">0.262</text>
+    <line class="board" x1="78.0" y1="511.3" x2="914.0" y2="511.3"><title>Unit3_Shelf_02 — z 0.457 m, 8 facings</title></line>
+    <text class="axis" x="68" y="514.8" text-anchor="end">0.457</text>
+    <line class="board" x1="78.0" y1="500.6" x2="914.0" y2="500.6"><title>Unit3_Shelf_03 — z 0.566 m, 15 facings</title></line>
+    <line class="board" x1="78.0" y1="485.2" x2="914.0" y2="485.2"><title>Unit3_Shelf_04 — z 0.724 m, 5 facings</title></line>
+    <text class="axis" x="68" y="488.7" text-anchor="end">0.724</text>
+    <line class="board" x1="78.0" y1="474.5" x2="914.0" y2="474.5"><title>Unit3_Shelf_05 — z 0.834 m, 17 facings</title></line>
+    <line class="board" x1="78.0" y1="457.9" x2="914.0" y2="457.9"><title>Unit3_Shelf_06 — z 1.004 m, 18 facings</title></line>
+    <text class="axis" x="68" y="461.4" text-anchor="end">1.004</text>
+    <line class="board" x1="78.0" y1="417.5" x2="914.0" y2="417.5"><title>Unit3_Shelf_07 — z 1.417 m, 17 facings</title></line>
+    <text class="axis" x="68" y="421.0" text-anchor="end">1.417</text>
+    <line class="board" x1="78.0" y1="391.3" x2="914.0" y2="391.3"><title>Unit3_Shelf_08 — z 1.684 m, 18 facings</title></line>
+    <text class="axis" x="68" y="394.8" text-anchor="end">1.684</text>
+    <text class="axis" x="68" y="559.5" text-anchor="end">0.000</text>
+    <text class="axis" x="68" y="374.0" text-anchor="end">height (m)</text>
+    <circle class="mark seated" cx="113.6" cy="519.2" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_01 — z 0.376 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="188.2" cy="519.3" r="4.5"><title>Cheez-It Original — Unit3_Shelf_01 — z 0.376 m, clearance 9.3 cm</title></circle>
+    <circle class="mark seated" cx="320.8" cy="519.6" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_01 — z 0.372 m, clearance 9.0 cm</title></circle>
+    <circle class="mark seated" cx="586.1" cy="523.1" r="4.5"><title>Ritz Crackers — Unit3_Shelf_01 — z 0.336 m, clearance 5.4 cm</title></circle>
+    <circle class="mark seated" cx="619.0" cy="518.1" r="4.5"><title>Oreo Original — Unit3_Shelf_01 — z 0.388 m, clearance 10.5 cm</title></circle>
+    <circle class="mark seated" cx="652.3" cy="519.7" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_01 — z 0.371 m, clearance 8.8 cm</title></circle>
+    <circle class="mark seated" cx="683.6" cy="518.3" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_01 — z 0.386 m, clearance 10.3 cm</title></circle>
+    <circle class="mark seated" cx="744.3" cy="517.2" r="4.5"><title>Takis Fuego — Unit3_Shelf_01 — z 0.397 m, clearance 11.5 cm</title></circle>
+    <circle class="mark seated" cx="819.0" cy="518.6" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_01 — z 0.383 m, clearance 10.0 cm</title></circle>
+    <circle class="mark seated" cx="250.7" cy="497.8" r="4.5"><title>Takis Fuego — Unit3_Shelf_03 — z 0.595 m, clearance 0.9 cm</title></circle>
+    <circle class="mark seated" cx="299.8" cy="499.2" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_02 — z 0.581 m, clearance 10.4 cm</title></circle>
+    <circle class="mark seated" cx="313.2" cy="504.6" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_02 — z 0.526 m, clearance 4.9 cm</title></circle>
+    <circle class="mark seated" cx="386.2" cy="498.5" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_03 — z 0.589 m, clearance 0.2 cm</title></circle>
+    <circle class="mark seated" cx="409.4" cy="505.3" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_02 — z 0.519 m, clearance 4.2 cm</title></circle>
+    <circle class="mark seated" cx="447.3" cy="501.5" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_02 — z 0.558 m, clearance 8.1 cm</title></circle>
+    <circle class="mark seated" cx="467.4" cy="495.9" r="4.5"><title>Cheez-It Original — Unit3_Shelf_03 — z 0.615 m, clearance 2.9 cm</title></circle>
+    <circle class="mark seated" cx="572.8" cy="497.1" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_03 — z 0.602 m, clearance 1.6 cm</title></circle>
+    <circle class="mark seated" cx="578.3" cy="497.2" r="4.5"><title>Ritz Crackers — Unit3_Shelf_03 — z 0.602 m, clearance 1.6 cm</title></circle>
+    <circle class="mark seated" cx="631.0" cy="503.1" r="4.5"><title>Oreo Original — Unit3_Shelf_02 — z 0.541 m, clearance 6.4 cm</title></circle>
+    <circle class="mark seated" cx="660.8" cy="506.8" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_02 — z 0.504 m, clearance 2.7 cm</title></circle>
+    <circle class="mark seated" cx="670.6" cy="500.5" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_02 — z 0.568 m, clearance 9.1 cm</title></circle>
+    <circle class="mark seated" cx="795.4" cy="501.0" r="4.5"><title>Takis Fuego — Unit3_Shelf_02 — z 0.562 m, clearance 8.5 cm</title></circle>
+    <circle class="mark seated" cx="163.3" cy="493.2" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_03 — z 0.643 m, clearance 5.6 cm</title></circle>
+    <circle class="mark seated" cx="316.6" cy="486.7" r="4.5"><title>Ritz Crackers — Unit3_Shelf_03 — z 0.709 m, clearance 12.2 cm</title></circle>
+    <circle class="mark seated" cx="333.2" cy="491.1" r="4.5"><title>Oreo Original — Unit3_Shelf_03 — z 0.664 m, clearance 7.8 cm</title></circle>
+    <circle class="mark seated" cx="348.2" cy="493.4" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_03 — z 0.640 m, clearance 5.4 cm</title></circle>
+    <circle class="mark seated" cx="355.3" cy="490.2" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_03 — z 0.673 m, clearance 8.7 cm</title></circle>
+    <circle class="mark seated" cx="572.4" cy="491.9" r="4.5"><title>Takis Fuego — Unit3_Shelf_03 — z 0.656 m, clearance 6.9 cm</title></circle>
+    <circle class="mark seated" cx="587.0" cy="487.7" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_03 — z 0.698 m, clearance 11.2 cm</title></circle>
+    <circle class="mark seated" cx="748.7" cy="486.6" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_03 — z 0.710 m, clearance 12.4 cm</title></circle>
+    <circle class="mark seated" cx="755.0" cy="491.3" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_03 — z 0.662 m, clearance 7.6 cm</title></circle>
+    <circle class="mark seated" cx="774.6" cy="490.5" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_03 — z 0.670 m, clearance 8.4 cm</title></circle>
+    <circle class="mark seated" cx="124.1" cy="481.8" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_04 — z 0.759 m, clearance 1.5 cm</title></circle>
+    <circle class="mark seated" cx="534.5" cy="471.1" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_05 — z 0.868 m, clearance 1.5 cm</title></circle>
+    <circle class="mark seated" cx="539.4" cy="473.7" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_04 — z 0.842 m, clearance 9.7 cm</title></circle>
+    <circle class="mark seated" cx="610.0" cy="476.5" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_04 — z 0.813 m, clearance 6.9 cm</title></circle>
+    <circle class="mark seated" cx="678.2" cy="475.7" r="4.5"><title>Cheez-It Original — Unit3_Shelf_04 — z 0.821 m, clearance 7.7 cm</title></circle>
+    <circle class="mark seated" cx="693.2" cy="470.7" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_05 — z 0.872 m, clearance 1.9 cm</title></circle>
+    <circle class="mark seated" cx="707.2" cy="476.1" r="4.5"><title>Ritz Crackers — Unit3_Shelf_04 — z 0.817 m, clearance 7.3 cm</title></circle>
+    <circle class="mark seated" cx="113.3" cy="461.2" r="4.5"><title>Oreo Original — Unit3_Shelf_05 — z 0.970 m, clearance 11.6 cm</title></circle>
+    <circle class="mark seated" cx="152.0" cy="468.6" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_05 — z 0.893 m, clearance 4.0 cm</title></circle>
+    <circle class="mark seated" cx="248.3" cy="465.5" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_05 — z 0.925 m, clearance 7.2 cm</title></circle>
+    <circle class="mark seated" cx="266.8" cy="464.9" r="4.5"><title>Takis Fuego — Unit3_Shelf_05 — z 0.932 m, clearance 7.8 cm</title></circle>
+    <circle class="mark seated" cx="335.2" cy="465.0" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_05 — z 0.930 m, clearance 7.7 cm</title></circle>
+    <circle class="mark seated" cx="372.5" cy="467.3" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_05 — z 0.907 m, clearance 5.4 cm</title></circle>
+    <circle class="mark seated" cx="580.8" cy="467.1" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_05 — z 0.910 m, clearance 5.6 cm</title></circle>
+    <circle class="mark seated" cx="580.2" cy="461.5" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_05 — z 0.967 m, clearance 11.3 cm</title></circle>
+    <circle class="mark seated" cx="593.7" cy="466.9" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_05 — z 0.911 m, clearance 5.8 cm</title></circle>
+    <circle class="mark seated" cx="703.2" cy="462.2" r="4.5"><title>Cheez-It Original — Unit3_Shelf_05 — z 0.959 m, clearance 10.6 cm</title></circle>
+    <circle class="mark seated" cx="744.6" cy="464.1" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_05 — z 0.940 m, clearance 8.6 cm</title></circle>
+    <circle class="mark seated" cx="770.8" cy="466.1" r="4.5"><title>Ritz Crackers — Unit3_Shelf_05 — z 0.920 m, clearance 6.6 cm</title></circle>
+    <circle class="mark seated" cx="790.7" cy="462.5" r="4.5"><title>Oreo Original — Unit3_Shelf_05 — z 0.957 m, clearance 10.3 cm</title></circle>
+    <circle class="mark seated" cx="807.0" cy="466.5" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_05 — z 0.915 m, clearance 6.1 cm</title></circle>
+    <circle class="mark seated" cx="872.8" cy="465.4" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_05 — z 0.926 m, clearance 7.3 cm</title></circle>
+    <circle class="mark seated" cx="187.1" cy="446.4" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_06 — z 1.120 m, clearance 9.7 cm</title></circle>
+    <circle class="mark seated" cx="268.5" cy="448.9" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_06 — z 1.096 m, clearance 7.2 cm</title></circle>
+    <circle class="mark seated" cx="290.0" cy="449.7" r="4.5"><title>Cheez-It Original — Unit3_Shelf_06 — z 1.087 m, clearance 6.3 cm</title></circle>
+    <circle class="mark seated" cx="296.7" cy="448.7" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_06 — z 1.098 m, clearance 7.4 cm</title></circle>
+    <circle class="mark seated" cx="333.6" cy="447.9" r="4.5"><title>Ritz Crackers — Unit3_Shelf_06 — z 1.106 m, clearance 8.2 cm</title></circle>
+    <circle class="mark seated" cx="340.8" cy="446.3" r="4.5"><title>Oreo Original — Unit3_Shelf_06 — z 1.122 m, clearance 9.8 cm</title></circle>
+    <circle class="mark seated" cx="373.0" cy="447.4" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_06 — z 1.110 m, clearance 8.7 cm</title></circle>
+    <circle class="mark seated" cx="415.8" cy="452.1" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_06 — z 1.063 m, clearance 3.9 cm</title></circle>
+    <circle class="mark seated" cx="505.4" cy="447.8" r="4.5"><title>Takis Fuego — Unit3_Shelf_06 — z 1.106 m, clearance 8.2 cm</title></circle>
+    <circle class="mark seated" cx="549.3" cy="448.4" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_06 — z 1.100 m, clearance 7.6 cm</title></circle>
+    <circle class="mark seated" cx="654.6" cy="447.2" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_06 — z 1.112 m, clearance 8.9 cm</title></circle>
+    <circle class="mark seated" cx="663.6" cy="443.7" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_06 — z 1.148 m, clearance 12.4 cm</title></circle>
+    <circle class="mark seated" cx="666.8" cy="445.5" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_06 — z 1.130 m, clearance 10.7 cm</title></circle>
+    <circle class="mark seated" cx="705.8" cy="444.7" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_06 — z 1.139 m, clearance 11.5 cm</title></circle>
+    <circle class="mark seated" cx="757.4" cy="446.3" r="4.5"><title>Cheez-It Original — Unit3_Shelf_06 — z 1.122 m, clearance 9.8 cm</title></circle>
+    <circle class="mark seated" cx="760.9" cy="448.2" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_06 — z 1.103 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="790.7" cy="449.2" r="4.5"><title>Ritz Crackers — Unit3_Shelf_06 — z 1.092 m, clearance 6.8 cm</title></circle>
+    <circle class="mark seated" cx="824.9" cy="446.7" r="4.5"><title>Oreo Original — Unit3_Shelf_06 — z 1.118 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="127.1" cy="405.8" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_07 — z 1.536 m, clearance 9.9 cm</title></circle>
+    <circle class="mark seated" cx="186.4" cy="409.3" r="4.5"><title>Takis Fuego — Unit3_Shelf_07 — z 1.500 m, clearance 6.4 cm</title></circle>
+    <circle class="mark seated" cx="213.0" cy="403.8" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_07 — z 1.557 m, clearance 12.0 cm</title></circle>
+    <circle class="mark seated" cx="277.3" cy="411.3" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_07 — z 1.479 m, clearance 4.3 cm</title></circle>
+    <circle class="mark seated" cx="296.2" cy="408.1" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_07 — z 1.513 m, clearance 7.6 cm</title></circle>
+    <circle class="mark seated" cx="313.1" cy="410.8" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_07 — z 1.485 m, clearance 4.8 cm</title></circle>
+    <circle class="mark seated" cx="426.3" cy="409.6" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_07 — z 1.497 m, clearance 6.0 cm</title></circle>
+    <circle class="mark seated" cx="497.6" cy="406.3" r="4.5"><title>Cheez-It Original — Unit3_Shelf_07 — z 1.531 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="499.0" cy="404.7" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_07 — z 1.547 m, clearance 11.1 cm</title></circle>
+    <circle class="mark seated" cx="688.1" cy="410.0" r="4.5"><title>Ritz Crackers — Unit3_Shelf_07 — z 1.493 m, clearance 5.6 cm</title></circle>
+    <circle class="mark seated" cx="690.4" cy="406.8" r="4.5"><title>Oreo Original — Unit3_Shelf_07 — z 1.526 m, clearance 8.9 cm</title></circle>
+    <circle class="mark seated" cx="699.0" cy="405.4" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_07 — z 1.541 m, clearance 10.4 cm</title></circle>
+    <circle class="mark seated" cx="698.8" cy="413.6" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_07 — z 1.456 m, clearance 1.9 cm</title></circle>
+    <circle class="mark seated" cx="707.4" cy="409.1" r="4.5"><title>Takis Fuego — Unit3_Shelf_07 — z 1.503 m, clearance 6.6 cm</title></circle>
+    <circle class="mark seated" cx="760.4" cy="402.0" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_07 — z 1.575 m, clearance 13.8 cm</title></circle>
+    <circle class="mark seated" cx="808.4" cy="407.8" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_07 — z 1.516 m, clearance 7.9 cm</title></circle>
+    <circle class="mark seated" cx="831.7" cy="412.6" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_07 — z 1.466 m, clearance 2.9 cm</title></circle>
+    <circle class="mark seated" cx="131.2" cy="385.1" r="4.5"><title>Cheez-It Original — Unit3_Shelf_08 — z 1.748 m, clearance 4.4 cm</title></circle>
+    <circle class="mark seated" cx="271.9" cy="379.1" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_08 — z 1.809 m, clearance 10.5 cm</title></circle>
+    <circle class="mark seated" cx="321.1" cy="378.5" r="4.5"><title>Ritz Crackers — Unit3_Shelf_08 — z 1.816 m, clearance 11.2 cm</title></circle>
+    <circle class="mark seated" cx="407.1" cy="385.2" r="4.5"><title>Oreo Original — Unit3_Shelf_08 — z 1.747 m, clearance 4.2 cm</title></circle>
+    <circle class="mark seated" cx="418.6" cy="386.3" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_08 — z 1.736 m, clearance 3.1 cm</title></circle>
+    <circle class="mark seated" cx="433.4" cy="380.2" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_08 — z 1.798 m, clearance 9.4 cm</title></circle>
+    <circle class="mark seated" cx="509.6" cy="384.2" r="4.5"><title>Takis Fuego — Unit3_Shelf_08 — z 1.757 m, clearance 5.3 cm</title></circle>
+    <circle class="mark seated" cx="529.7" cy="386.4" r="4.5"><title>Sun Chips Harvest Cheddar — Unit3_Shelf_08 — z 1.734 m, clearance 3.0 cm</title></circle>
+    <circle class="mark seated" cx="558.1" cy="385.4" r="4.5"><title>Dot&#x27;s Homestyle Pretzels Honey Mustard — Unit3_Shelf_08 — z 1.745 m, clearance 4.1 cm</title></circle>
+    <circle class="mark seated" cx="608.6" cy="377.1" r="4.5"><title>Kettle Brand Pepperoncini — Unit3_Shelf_08 — z 1.829 m, clearance 12.5 cm</title></circle>
+    <circle class="mark seated" cx="613.7" cy="381.1" r="4.5"><title>Lay&#x27;s Classic — Unit3_Shelf_08 — z 1.789 m, clearance 8.5 cm</title></circle>
+    <circle class="mark seated" cx="735.6" cy="382.3" r="4.5"><title>Doritos Nacho Cheese — Unit3_Shelf_08 — z 1.777 m, clearance 7.3 cm</title></circle>
+    <circle class="mark seated" cx="747.1" cy="386.3" r="4.5"><title>Cheez-It Original — Unit3_Shelf_08 — z 1.736 m, clearance 3.2 cm</title></circle>
+    <circle class="mark seated" cx="753.3" cy="383.1" r="4.5"><title>Pringles Sour Cream &amp; Onion — Unit3_Shelf_08 — z 1.768 m, clearance 6.4 cm</title></circle>
+    <circle class="mark seated" cx="759.6" cy="384.6" r="4.5"><title>Ritz Crackers — Unit3_Shelf_08 — z 1.753 m, clearance 4.8 cm</title></circle>
+    <circle class="mark seated" cx="826.1" cy="378.6" r="4.5"><title>Oreo Original — Unit3_Shelf_08 — z 1.814 m, clearance 11.0 cm</title></circle>
+    <circle class="mark seated" cx="859.4" cy="378.8" r="4.5"><title>Goldfish Cheddar — Unit3_Shelf_08 — z 1.812 m, clearance 10.8 cm</title></circle>
+    <circle class="mark seated" cx="862.7" cy="379.2" r="4.5"><title>Chex Mix Traditional — Unit3_Shelf_08 — z 1.808 m, clearance 10.4 cm</title></circle>
+  </g>
+</svg>

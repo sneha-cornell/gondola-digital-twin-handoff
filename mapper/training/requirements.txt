@@ -1,0 +1,3 @@
+ultralytics==8.3.161
+google-cloud-aiplatform>=1.60.0
+google-cloud-storage>=2.16.0

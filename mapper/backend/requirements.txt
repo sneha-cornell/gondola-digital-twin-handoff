@@ -1,0 +1,28 @@
+fastapi==0.116.1
+google-cloud-vision>=3.7.0
+paddlepaddle==2.6.2
+paddleocr>=2.7.0
+numpy==2.2.6
+Pillow==11.2.1
+python-multipart==0.0.20
+scikit-learn==1.7.0
+uvicorn[standard]==0.35.0
+# Optional dense reconstruction dependency. No compatible PyPI wheel is
+# available on this Amazon Linux/glibc 2.26 host; without it the backend falls
+# back to sparse COLMAP points.
+# open3d>=0.19.0
+transformers>=4.49.0
+accelerate>=0.27.0
+opencv-python>=4.8.0
+torch>=2.0.0
+ultralytics>=8.0.0
+anthropic>=0.40.0
+requests>=2.32.0
+# Optional: barcode reading. Requires libzbar (brew install zbar / apt install libzbar0).
+# pyzbar>=0.1.9
+# Optional: local open-source VLM backend (Qwen2.5-VL). Enable with
+# LOCAL_VLM_ENABLED=1. Requires transformers >= 4.49 for the
+# Qwen2_5_VLForConditionalGeneration class.
+# transformers >= 4.49 is already a transitive requirement above; pin
+# explicitly here if you need to lock the local-VLM contract.
+# transformers>=4.49.0

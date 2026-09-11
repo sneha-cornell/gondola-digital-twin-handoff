@@ -1,0 +1,100 @@
+{
+  "source_results": "../output/demo/demo_results.json",
+  "method": "shelf-plane frame + 1-D shelf-height ICP",
+  "transform": {
+    "convention": "p_model = scale * R @ (p_colmap - origin_colmap)",
+    "frame": {
+      "up": "+Z",
+      "floor_z": 0.0,
+      "bay_run": "+X",
+      "depth": "+Y",
+      "origin": "floor level, centre of the bay run, on the back-panel plane",
+      "units": "meters"
+    },
+    "scale_meters_per_colmap_unit": 1.7868033298140464,
+    "rotation_model_from_colmap": [
+      [
+        0.003715759374262093,
+        -0.9988215771600705,
+        -0.04839059962164269
+      ],
+      [
+        0.7559390146564728,
+        -0.028872831979758113,
+        0.654005019624215
+      ],
+      [
+        -0.6546314988239366,
+        -0.0390104674791036,
+        0.7549409143599174
+      ]
+    ],
+    "origin_colmap": [
+      -0.11459511807597611,
+      2.4821087740790673,
+      -9.543267875170251
+    ],
+    "matrix_4x4_model_from_colmap": [
+      [
+        0.006639331222719265,
+        -1.7846977199597314,
+        -0.08646448453564949,
+        3.6054209671241497
+      ],
+      [
+        1.350714348524535,
+        -0.051590072322593286,
+        1.168578346779648,
+        11.434893637865144
+      ],
+      [
+        -1.1696977418997698,
+        -0.06970403318926488,
+        1.3489309395911613,
+        12.912180643145119
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "raw_colmap": {}
+  },
+  "scale_seed": {
+    "anchor": "run",
+    "model_m": 7.256543054974166,
+    "detected_colmap": 3.980764149048403,
+    "scale": 1.8229020316887736
+  },
+  "shelf_height_fit": {
+    "scale": 1.7868033298140464,
+    "offset": 12.912180643145115,
+    "matched": 16,
+    "distinct_model_shelves_matched": 8,
+    "detected_count": 16,
+    "model_count": 8,
+    "rms_m": 0.0006845189911323382,
+    "max_error_m": 0.0016311905282427874,
+    "seed_model_index": 0,
+    "scale_drift_vs_hint": 0.9801971245589733
+  },
+  "fixture_axes": {
+    "run_span_colmap": 3.980764149048403,
+    "depth_span_colmap": 0.8908846481890356,
+    "run_span_m": 7.112842636724066,
+    "depth_span_m": 1.591835655864384,
+    "anisotropy": 4.451400012313053,
+    "source": "shelf_cluster_points",
+    "flip_applied": false
+  },
+  "quality": {
+    "product_count": 221,
+    "snapped_to_a_shelf": 221,
+    "snapped_fraction": 1.0,
+    "inside_fixture_bbox": 221,
+    "inside_fraction": 1.0,
+    "median_clearance_m": 0.07414452787246728
+  }
+}

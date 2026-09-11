@@ -1,0 +1,6 @@
+numpy
+
+# Optional -- if present, isolate_and_fit()'s top-down density filter uses a
+# real KDTree; if absent, it silently skips density filtering (see
+# _density_mask() in build_gondola_from_scan.py). Not required to run.
+# scikit-learn

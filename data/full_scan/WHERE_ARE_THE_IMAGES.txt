@@ -1,0 +1,10 @@
+This folder has the sparse COLMAP model (cameras.txt, images.txt, points3D.txt)
+for the full 72-image scan, but not the 72 source photos themselves (142 MB,
+left out to keep this handoff lean).
+
+The one photo actually used in every example in this repo, 00014.jpg, IS
+included at: mapper/backend/workspace/single_view_00014/images/00014.jpg
+
+If you need the full image set (e.g. to run a proper multi-view job instead
+of the single-image one), copy it from the original machine:
+    Downloads/data/images/  (72 files, ~142 MB)

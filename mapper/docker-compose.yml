@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./backend/workspace:/app/backend/workspace
+    environment:
+      COLMAP_BINARY: colmap
+      WORKSPACE_DIR: /app/backend/workspace
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_PROXY_TARGET: http://backend:8081
+    depends_on:
+      - backend

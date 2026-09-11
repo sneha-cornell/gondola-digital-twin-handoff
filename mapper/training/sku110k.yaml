@@ -1,0 +1,15 @@
+# SKU-110K dataset config for Ultralytics YOLO.
+#
+# On Vertex AI, GCS buckets are FUSE-mounted at /gcs/<bucket-name>.
+# Replace <YOUR_BUCKET> with your actual bucket name.
+#
+# To use locally (after running convert_sku110k.py), set:
+#   path: ./sku110k
+
+path: /gcs/<YOUR_BUCKET>/sku110k
+train: images/train
+val:   images/val
+
+nc: 1
+names:
+  0: product

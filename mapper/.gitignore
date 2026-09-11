@@ -1,0 +1,28 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+node_modules/
+dist/
+.vite/
+.tmp/
+backend/workspace/*
+!backend/workspace/.gitkeep
+shelf-product-identifier/
+
+
+# Claude Code / Jupyter local state
+.claude/
+.ipynb_checkpoints/
+
+# Large binary assets — never push to GitHub
+*.blend
+*.blend1
+data.zip
+*.pt
+
+# Runtime caches
+backend/knowledge_base/open_world_cache/
+backend/knowledge_base/_quarantine/

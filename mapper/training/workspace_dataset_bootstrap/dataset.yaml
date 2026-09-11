@@ -1,0 +1,7 @@
+path: /Users/akhilb/product_detection1/training/workspace_dataset_bootstrap
+train: images/train
+val: images/val
+
+nc: 1
+names:
+  0: product

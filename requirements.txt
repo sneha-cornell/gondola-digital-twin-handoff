@@ -1,0 +1,13 @@
+# Combined requirements for this handoff. Split into two groups since the
+# mapper's detector stack is heavy and not needed for alignment-only work.
+
+# --- alignment / analysis scripts (alignment/, bridge/) -- light ---
+numpy
+scipy
+scikit-learn
+Pillow
+
+# --- mapper backend (mapper/backend/) -- heavy, needed to re-run detection ---
+# See mapper/backend/requirements.txt for the full, authoritative list
+# (torch, ultralytics, paddleocr, transformers, fastapi, etc.) -- not
+# duplicated here to avoid drift between the two files.
