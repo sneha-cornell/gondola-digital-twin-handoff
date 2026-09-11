@@ -1,0 +1,900 @@
+{
+  "image_name": "00014.jpg",
+  "detection_source": "real -- results.json products[] (real YOLO detections, real geometry.py shelf assignment)",
+  "transform_source": "real -- /Users/snehamanimurugan/Documents/gondola-digital-twin-handoff/mapper/backend/workspace/single_view_00014/aligned/alignment_report.json (fitted by align_products_to_gondola.py last week)",
+  "edge_source": "real observed 3D points per box, background-rejected (radius=0.6), projected onto the product's real assigned shelf's real axis_u, 5th/95th percentile, then transformed into the model frame as 3D points (not by scaling a 1-D offset)",
+  "frame": "gondola model frame, meters, +Z up, +X bay run (same as render_planogram.py)",
+  "positioned_count": 29,
+  "insufficient_evidence_count": 6,
+  "products": [
+    {
+      "id": "00014-002",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 121,
+      "background_points_rejected": 4,
+      "observed_point_count": 117,
+      "status": "positioned",
+      "center_colmap": [
+        -1.8986317265668415,
+        0.6915838847377218,
+        0.011627617420725628
+      ],
+      "center_model_m": [
+        -1.9542972160235696,
+        1.107567754437148,
+        0.12851730382854745
+      ],
+      "edge_left_model_m": [
+        -1.9601167599105294,
+        0.957286088989698,
+        0.12851730382854723
+      ],
+      "edge_right_model_m": [
+        -1.9504357535056391,
+        1.207284678912597,
+        0.12851730382854734
+      ],
+      "width_m": 0.2501859645312849
+    },
+    {
+      "id": "00014-008",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 145,
+      "background_points_rejected": 2,
+      "observed_point_count": 143,
+      "status": "positioned",
+      "center_colmap": [
+        -1.3838704036866847,
+        0.6667776159847667,
+        -0.22456943490817588
+      ],
+      "center_model_m": [
+        -1.4302066528862214,
+        0.8605929965137961,
+        0.12851730382854717
+      ],
+      "edge_left_model_m": [
+        -1.4356752929682648,
+        0.7193729361060217,
+        0.12851730382854723
+      ],
+      "edge_right_model_m": [
+        -1.424012260479519,
+        1.0205546061169504,
+        0.12851730382854723
+      ],
+      "width_m": 0.3014074064740372
+    },
+    {
+      "id": "00014-009",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 239,
+      "background_points_rejected": 0,
+      "observed_point_count": 239,
+      "status": "positioned",
+      "center_colmap": [
+        -2.291391912467433,
+        0.5699552837986377,
+        -0.08339834454125092
+      ],
+      "center_model_m": [
+        -2.366397366410464,
+        0.9803970483565397,
+        0.12851730382854729
+      ],
+      "edge_left_model_m": [
+        -2.3707287414682763,
+        0.8685452829932347,
+        0.1285173038285474
+      ],
+      "edge_right_model_m": [
+        -2.3602582387083157,
+        1.138931523462167,
+        0.1285173038285474
+      ],
+      "width_m": 0.2705888956756534
+    },
+    {
+      "id": "00014-010",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 24,
+      "background_points_rejected": 8,
+      "observed_point_count": 16,
+      "status": "positioned",
+      "center_colmap": [
+        -1.5644326073026422,
+        0.6919698165162476,
+        -0.10942551119392309
+      ],
+      "center_model_m": [
+        -1.61260731852053,
+        0.9842536575375115,
+        0.12851730382854729
+      ],
+      "edge_left_model_m": [
+        -1.6176246455672483,
+        0.854688131557905,
+        0.12851730382854734
+      ],
+      "edge_right_model_m": [
+        -1.6073935091994442,
+        1.1188930662811958,
+        0.12851730382854729
+      ],
+      "width_m": 0.26440295702490724
+    },
+    {
+      "id": "00014-034",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 70,
+      "background_points_rejected": 0,
+      "observed_point_count": 70,
+      "status": "positioned",
+      "center_colmap": [
+        -1.925274390884376,
+        0.8139483677623667,
+        0.2609585515941636
+      ],
+      "center_model_m": [
+        -1.9708943592823114,
+        1.3922312802850874,
+        0.12851730382854734
+      ],
+      "edge_left_model_m": [
+        -1.9725423039680778,
+        1.3496753898660456,
+        0.12851730382854717
+      ],
+      "edge_right_model_m": [
+        -1.9698309393193083,
+        1.4196926288399525,
+        0.12851730382854734
+      ],
+      "width_m": 0.07006971708083158
+    },
+    {
+      "id": "00014-050",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 22,
+      "background_points_rejected": 1,
+      "observed_point_count": 21,
+      "status": "positioned",
+      "center_colmap": [
+        -1.0561793931528223,
+        0.9798063584035392,
+        0.26898221443613
+      ],
+      "center_model_m": [
+        -1.0679847038714547,
+        1.44172197769955,
+        0.12851730382854712
+      ],
+      "edge_left_model_m": [
+        -1.0734561345763576,
+        1.3004298533192207,
+        0.12851730382854734
+      ],
+      "edge_right_model_m": [
+        -1.0646468893481287,
+        1.5279164175497486,
+        0.12851730382854723
+      ],
+      "width_m": 0.22765706601575358
+    },
+    {
+      "id": "00014-057",
+      "shelf_id": "shelf-2",
+      "raw_observed_point_count": 17,
+      "background_points_rejected": 0,
+      "observed_point_count": 17,
+      "status": "positioned",
+      "center_colmap": [
+        -1.654991967938988,
+        0.8222651278969049,
+        0.17873232004582393
+      ],
+      "center_model_m": [
+        -1.6938577632004057,
+        1.3104754586104355,
+        0.12851730382854729
+      ],
+      "edge_left_model_m": [
+        -1.6950106984283897,
+        1.2807025022447767,
+        0.12851730382854734
+      ],
+      "edge_right_model_m": [
+        -1.6927450504185195,
+        1.339209725981668,
+        0.12851730382854729
+      ],
+      "width_m": 0.05855107505676807
+    },
+    {
+      "id": "00014-011",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 29,
+      "background_points_rejected": 0,
+      "observed_point_count": 29,
+      "status": "positioned",
+      "center_colmap": [
+        -0.11246311578077846,
+        1.8709436233227827,
+        0.3450474107641351
+      ],
+      "center_model_m": [
+        0.02824738191565118,
+        1.8830571075748215,
+        -0.47905568603014986
+      ],
+      "edge_left_model_m": [
+        0.02672611991111977,
+        1.8437726220440604,
+        -0.47905568603014964
+      ],
+      "edge_right_model_m": [
+        0.0317574091520681,
+        1.9736987023631412,
+        -0.47905568603014975
+      ],
+      "width_m": 0.13002346026200923
+    },
+    {
+      "id": "00014-013",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 115,
+      "background_points_rejected": 0,
+      "observed_point_count": 115,
+      "status": "positioned",
+      "center_colmap": [
+        -0.7176155029044615,
+        1.7549524207583045,
+        0.3384735823129719
+      ],
+      "center_model_m": [
+        -0.6004940349385315,
+        1.8474649618391836,
+        -0.47905568603014975
+      ],
+      "edge_left_model_m": [
+        -0.6054819480191408,
+        1.7186590108194228,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -0.5974931104687616,
+        1.9249596823806945,
+        -0.47905568603014986
+      ],
+      "width_m": 0.20645529446356667
+    },
+    {
+      "id": "00014-014",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 28,
+      "background_points_rejected": 0,
+      "observed_point_count": 28,
+      "status": "positioned",
+      "center_colmap": [
+        -1.4704414900138574,
+        1.437884722189399,
+        -0.008034175407945987
+      ],
+      "center_model_m": [
+        -1.3976884977245587,
+        1.4152370504070957,
+        -0.47905568603015014
+      ],
+      "edge_left_model_m": [
+        -1.3984071039426214,
+        1.3966800395229046,
+        -0.4790556860301499
+      ],
+      "edge_right_model_m": [
+        -1.396582756759752,
+        1.4437912802526698,
+        -0.4790556860301498
+      ],
+      "width_m": 0.04714655073005367
+    },
+    {
+      "id": "00014-016",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 217,
+      "background_points_rejected": 1,
+      "observed_point_count": 216,
+      "status": "positioned",
+      "center_colmap": [
+        -2.5305706558375674,
+        1.5080827592741362,
+        0.515826941464093
+      ],
+      "center_model_m": [
+        -2.475369108065631,
+        1.9667830204693721,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -2.4778616688022095,
+        1.9024160896586226,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -2.4696729097576964,
+        2.1138794570738733,
+        -0.47905568603014975
+      ],
+      "width_m": 0.21162185977182596
+    },
+    {
+      "id": "00014-017",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 206,
+      "background_points_rejected": 0,
+      "observed_point_count": 206,
+      "status": "positioned",
+      "center_colmap": [
+        -1.4972666333265217,
+        1.6338724039345784,
+        0.3855358784872635
+      ],
+      "center_model_m": [
+        -1.4080703984538299,
+        1.865285832006999,
+        -0.47905568603014975
+      ],
+      "edge_left_model_m": [
+        -1.4112318236986443,
+        1.7836464011156996,
+        -0.47905568603015
+      ],
+      "edge_right_model_m": [
+        -1.3996840519267941,
+        2.0818516226570933,
+        -0.47905568603014964
+      ],
+      "width_m": 0.2984287271484541
+    },
+    {
+      "id": "00014-018",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 134,
+      "background_points_rejected": 2,
+      "observed_point_count": 132,
+      "status": "positioned",
+      "center_colmap": [
+        -2.0337279413202536,
+        1.4498263783679106,
+        0.22065718923407956
+      ],
+      "center_model_m": [
+        -1.9725055874532424,
+        1.6513557413370414,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -1.9746692854626058,
+        1.5954812352436898,
+        -0.4790556860301501
+      ],
+      "edge_right_model_m": [
+        -1.9705764841506406,
+        1.701172163855106,
+        -0.47905568603015
+      ],
+      "width_m": 0.10577014424365089
+    },
+    {
+      "id": "00014-019",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 153,
+      "background_points_rejected": 0,
+      "observed_point_count": 153,
+      "status": "positioned",
+      "center_colmap": [
+        -2.3228360165684925,
+        1.3788077279054796,
+        0.1869590331959327
+      ],
+      "center_model_m": [
+        -2.274240053406141,
+        1.5993125780820865,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -2.276263193616627,
+        1.547067782584136,
+        -0.47905568603014975
+      ],
+      "edge_right_model_m": [
+        -2.270116711892579,
+        1.7057921651258774,
+        -0.47905568603014964
+      ],
+      "width_m": 0.1588433468888173
+    },
+    {
+      "id": "00014-020",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 36,
+      "background_points_rejected": 0,
+      "observed_point_count": 36,
+      "status": "positioned",
+      "center_colmap": [
+        -1.5240013470907054,
+        1.5029092991882735,
+        0.13882167983557853
+      ],
+      "center_model_m": [
+        -1.446789360354526,
+        1.581148306302497,
+        -0.47905568603014975
+      ],
+      "edge_left_model_m": [
+        -1.4484500865453145,
+        1.5382623512084705,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -1.4458133900541499,
+        1.6063513883681624,
+        -0.47905568603014986
+      ],
+      "width_m": 0.06814007007422589
+    },
+    {
+      "id": "00014-021",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 82,
+      "background_points_rejected": 0,
+      "observed_point_count": 82,
+      "status": "positioned",
+      "center_colmap": [
+        -1.392324394654323,
+        1.6984240592496724,
+        0.47369479849193447
+      ],
+      "center_model_m": [
+        -1.2951735187185722,
+        1.97123943942603,
+        -0.47905568603014953
+      ],
+      "edge_left_model_m": [
+        -1.2978123122515388,
+        1.9030962490645307,
+        -0.47905568603015
+      ],
+      "edge_right_model_m": [
+        -1.2907031173194279,
+        2.086681367613459,
+        -0.47905568603014964
+      ],
+      "width_m": 0.183722716083795
+    },
+    {
+      "id": "00014-022",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 66,
+      "background_points_rejected": 0,
+      "observed_point_count": 66,
+      "status": "positioned",
+      "center_colmap": [
+        -1.1455141687688113,
+        1.6075164448008428,
+        0.20571760645953469
+      ],
+      "center_model_m": [
+        -1.050760775976727,
+        1.6754016508094198,
+        -0.47905568603014975
+      ],
+      "edge_left_model_m": [
+        -1.0513245814969272,
+        1.660842153671855,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -1.049672409031653,
+        1.7035072206445747,
+        -0.47905568603014986
+      ],
+      "width_m": 0.04269704455394628
+    },
+    {
+      "id": "00014-023",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 81,
+      "background_points_rejected": 1,
+      "observed_point_count": 80,
+      "status": "positioned",
+      "center_colmap": [
+        -2.015615479900681,
+        1.6798141206729,
+        0.6644289968168129
+      ],
+      "center_model_m": [
+        -1.9339907354810577,
+        2.1610522913808414,
+        -0.47905568603014986
+      ],
+      "edge_left_model_m": [
+        -1.938178989465962,
+        2.052896429616708,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -1.930093111358859,
+        2.261703039231488,
+        -0.47905568603014975
+      ],
+      "width_m": 0.2089631107243144
+    },
+    {
+      "id": "00014-024",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 11,
+      "background_points_rejected": 0,
+      "observed_point_count": 11,
+      "status": "positioned",
+      "center_colmap": [
+        -1.4984154534246885,
+        1.5373873527499322,
+        0.19701277394277444
+      ],
+      "center_model_m": [
+        -1.4176345639115997,
+        1.6490600354164338,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -1.419004768080018,
+        1.6136764094084977,
+        -0.47905568603015
+      ],
+      "edge_right_model_m": [
+        -1.417132297788299,
+        1.662030362812127,
+        -0.47905568603015
+      ],
+      "width_m": 0.04839019482037367
+    },
+    {
+      "id": "00014-025",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 42,
+      "background_points_rejected": 0,
+      "observed_point_count": 42,
+      "status": "positioned",
+      "center_colmap": [
+        -2.3111863248332343,
+        1.421167638819548,
+        0.265664238648272
+      ],
+      "center_model_m": [
+        -2.2586470722523417,
+        1.690101020771812,
+        -0.47905568603014986
+      ],
+      "edge_left_model_m": [
+        -2.2599052247574085,
+        1.6576109738676224,
+        -0.47905568603015
+      ],
+      "edge_right_model_m": [
+        -2.257948996013206,
+        1.7081278733678922,
+        -0.47905568603014964
+      ],
+      "width_m": 0.05055476205086922
+    },
+    {
+      "id": "00014-026",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 2,
+      "background_points_rejected": 0,
+      "observed_point_count": 2,
+      "status": "insufficient_3d_evidence"
+    },
+    {
+      "id": "00014-027",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 5,
+      "background_points_rejected": 0,
+      "observed_point_count": 5,
+      "status": "insufficient_3d_evidence"
+    },
+    {
+      "id": "00014-028",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 6,
+      "background_points_rejected": 6,
+      "observed_point_count": 0,
+      "status": "insufficient_3d_evidence"
+    },
+    {
+      "id": "00014-029",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 124,
+      "background_points_rejected": 0,
+      "observed_point_count": 124,
+      "status": "positioned",
+      "center_colmap": [
+        -1.5846964561867842,
+        1.6043296967957077,
+        0.3595502976630987
+      ],
+      "center_model_m": [
+        -1.5000199456589685,
+        1.8314359709974928,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -1.5020359017112406,
+        1.77937669644108,
+        -0.47905568603015
+      ],
+      "edge_right_model_m": [
+        -1.4983105768560188,
+        1.875578054219307,
+        -0.47905568603014986
+      ],
+      "width_m": 0.09627346095187071
+    },
+    {
+      "id": "00014-030",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 14,
+      "background_points_rejected": 0,
+      "observed_point_count": 14,
+      "status": "positioned",
+      "center_colmap": [
+        -1.767928918285645,
+        1.4772681360113595,
+        0.17751658848442037
+      ],
+      "center_model_m": [
+        -1.6983894474589154,
+        1.6142101355088636,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -1.6989344059345504,
+        1.6001373372090424,
+        -0.47905568603014975
+      ],
+      "edge_right_model_m": [
+        -1.6977710054831234,
+        1.6301805434841168,
+        -0.47905568603014986
+      ],
+      "width_m": 0.030065723738121622
+    },
+    {
+      "id": "00014-031",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 14,
+      "background_points_rejected": 0,
+      "observed_point_count": 14,
+      "status": "positioned",
+      "center_colmap": [
+        -0.6624475836401519,
+        1.7508129248006918,
+        0.3102598147850541
+      ],
+      "center_model_m": [
+        -0.5444550586466298,
+        1.8176707901401339,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -0.5459018400181386,
+        1.7803096638608245,
+        -0.4790556860301501
+      ],
+      "edge_right_model_m": [
+        -0.5435789281351678,
+        1.8402956478556787,
+        -0.47905568603015
+      ],
+      "width_m": 0.06003094364947925
+    },
+    {
+      "id": "00014-038",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 5,
+      "background_points_rejected": 0,
+      "observed_point_count": 5,
+      "status": "insufficient_3d_evidence"
+    },
+    {
+      "id": "00014-039",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 3,
+      "background_points_rejected": 0,
+      "observed_point_count": 3,
+      "status": "insufficient_3d_evidence"
+    },
+    {
+      "id": "00014-041",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 73,
+      "background_points_rejected": 1,
+      "observed_point_count": 72,
+      "status": "positioned",
+      "center_colmap": [
+        -2.4632253363893395,
+        1.514386025134518,
+        0.5036242913042059
+      ],
+      "center_model_m": [
+        -2.405972974213596,
+        1.9559127410309234,
+        -0.4790556860301501
+      ],
+      "edge_left_model_m": [
+        -2.4070136664888424,
+        1.9290383035526029,
+        -0.4790556860301502
+      ],
+      "edge_right_model_m": [
+        -2.405267610960092,
+        1.9741277706863292,
+        -0.47905568603014975
+      ],
+      "width_m": 0.04512326180932473
+    },
+    {
+      "id": "00014-042",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 78,
+      "background_points_rejected": 0,
+      "observed_point_count": 78,
+      "status": "positioned",
+      "center_colmap": [
+        -2.6826502878208585,
+        1.5279508215098199,
+        0.6101635463607107
+      ],
+      "center_model_m": [
+        -2.629114602753532,
+        2.067905110828646,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -2.6304383010984265,
+        2.0337224333396877,
+        -0.47905568603014975
+      ],
+      "edge_right_model_m": [
+        -2.6258322001569465,
+        2.1526686143721516,
+        -0.47905568603014975
+      ],
+      "width_m": 0.11903533151165992
+    },
+    {
+      "id": "00014-043",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 42,
+      "background_points_rejected": 0,
+      "observed_point_count": 42,
+      "status": "positioned",
+      "center_colmap": [
+        -1.0048231602391076,
+        1.6565188525920131,
+        0.2503975065639715
+      ],
+      "center_model_m": [
+        -0.9026695001024365,
+        1.7331567310691225,
+        -0.47905568603014975
+      ],
+      "edge_left_model_m": [
+        -0.9038284340822312,
+        1.7032288652414487,
+        -0.47905568603014953
+      ],
+      "edge_right_model_m": [
+        -0.901548772873607,
+        1.762097960439038,
+        -0.47905568603014986
+      ],
+      "width_m": 0.0589132177410889
+    },
+    {
+      "id": "00014-044",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 15,
+      "background_points_rejected": 0,
+      "observed_point_count": 15,
+      "status": "positioned",
+      "center_colmap": [
+        -2.5564247543984515,
+        1.524168586929022,
+        0.5567503099332978
+      ],
+      "center_model_m": [
+        -2.500401388634947,
+        2.0125097814680304,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -2.5018212970248994,
+        1.9758426127397577,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -2.499053088354804,
+        2.0473277698806984,
+        -0.47905568603014975
+      ],
+      "width_m": 0.07153873545643773
+    },
+    {
+      "id": "00014-046",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 86,
+      "background_points_rejected": 0,
+      "observed_point_count": 86,
+      "status": "positioned",
+      "center_colmap": [
+        -2.2995107480410986,
+        1.5163789219109987,
+        0.44785619536545923
+      ],
+      "center_model_m": [
+        -2.2384320177385795,
+        1.8995551305374279,
+        -0.47905568603015
+      ],
+      "edge_left_model_m": [
+        -2.2392264287276236,
+        1.8790405663718752,
+        -0.47905568603014986
+      ],
+      "edge_right_model_m": [
+        -2.2369142166184215,
+        1.9387502435198165,
+        -0.47905568603014986
+      ],
+      "width_m": 0.059754429709849316
+    },
+    {
+      "id": "00014-052",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 20,
+      "background_points_rejected": 0,
+      "observed_point_count": 20,
+      "status": "positioned",
+      "center_colmap": [
+        -1.9822863846474654,
+        1.638021706967682,
+        0.5704412264403236
+      ],
+      "center_model_m": [
+        -1.9035519404632686,
+        2.0548250567613415,
+        -0.4790556860301502
+      ],
+      "edge_left_model_m": [
+        -1.9041641669066074,
+        2.0390151563081274,
+        -0.4790556860301501
+      ],
+      "edge_right_model_m": [
+        -1.9030999002577436,
+        2.0664983693533645,
+        -0.47905568603014986
+      ],
+      "width_m": 0.02750381178654656
+    },
+    {
+      "id": "00014-053",
+      "shelf_id": "shelf-1",
+      "raw_observed_point_count": 0,
+      "background_points_rejected": 0,
+      "observed_point_count": 0,
+      "status": "insufficient_3d_evidence"
+    }
+  ]
+}
